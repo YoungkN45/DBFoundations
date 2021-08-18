@@ -255,7 +255,7 @@ WITH SCHEMABINDING
 AS
     SELECT TOP 1000000000 [CategoryName], [ProductName], [UnitPrice]
     FROM dbo.vCategories JOIN dbo.vProducts
-    ON vCategories.CategoryID = vProducts.CategoryID
+        ON vCategories.CategoryID = vProducts.CategoryID
     ORDER BY 1, 2;
 GO
 
@@ -281,7 +281,7 @@ WITH SCHEMABINDING
 AS
     SELECT TOP 1000000000 [ProductName], [InventoryDate], [Count]
     FROM dbo.vProducts JOIN dbo.vInventories
-    ON vProducts.ProductID = vInventories.ProductID
+        ON vProducts.ProductID = vInventories.ProductID
     ORDER BY 1, 2;
 GO
 
@@ -307,7 +307,7 @@ WITH SCHEMABINDING
 AS
     SELECT DISTINCT TOP 100000 [InventoryDate], [EmployeeFirstName] + ' ' + [EmployeeLastName] AS EmployeeName
     FROM dbo.vInventories JOIN dbo.vEmployees
-    ON vInventories.EmployeeID = vEmployees.EmployeeID
+        ON vInventories.EmployeeID = vEmployees.EmployeeID
     ORDER BY [InventoryDate];
 GO
 
